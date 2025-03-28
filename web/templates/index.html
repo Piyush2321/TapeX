@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TapeX - File Transfer Monitor</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TapeX File Transfer Monitor</h1>
+            <div class="controls">
+                <button id="refreshBtn">Refresh Data</button>
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="analytics">Analytics</option>
+                    <option value="art">Art</option>
+                    <option value="devops">DevOps</option>
+                </select>
+            </div>
+        </header>
+
+        <main>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3>Total Transfers</h3>
+                    <p id="totalTransfers">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Size</h3>
+                    <p id="totalSize">0 MB</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Users</h3>
+                    <p id="activeUsers">0</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table id="transferTable">
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Username</th>
+                            <th>Filename</th>
+                            <th>Size</th>
+                            <th>Category</th>
+                            <th>Direction</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html> 
